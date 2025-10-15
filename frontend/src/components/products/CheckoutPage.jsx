@@ -148,7 +148,7 @@ const CheckoutPage = () => {
       shippingFee: calculateShipping(),
       couponCode: appliedCoupon?.code,
       couponDiscount: couponDiscount,
-      status: 'pending_admin_review'
+      orderStatus: 'Pending Review'
     });
     
     setShowConfirmationPopup(true);
@@ -178,7 +178,8 @@ const CheckoutPage = () => {
           paymentMethod: orderDetails.paymentMethod,
           totalAmount: orderDetails.totalAmount,
           totalPrice: orderDetails.totalPrice,
-          shippingFee: orderDetails.shippingFee
+          shippingFee: orderDetails.shippingFee,
+          orderStatus: 'Pending Review'
         });
       } else {
         // Send order details to admin for review (logged-in user)
