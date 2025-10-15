@@ -10,7 +10,6 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 const Home = lazy(() => import('./pages/home'));
 const Register = lazy(() => import('./pages/auth/register'));
 const Products = lazy(() => import('./components/products/productsidebar'));
-const ProductDetails = lazy(() => import('./components/products/ProductDetails'));
 const ProductList = lazy(() => import('./pages/products/ProductList'));
 const CartPage = lazy(() => import('./components/products/CartPage'));
 const OrdersPage = lazy(() => import('./pages/orders/OrdersPage'));
@@ -186,12 +185,7 @@ function App() {
                       </Suspense>
                     } />
                     
-                    {/* Product Details Route */}
-                    <Route path="/product/:id" element={
-                      <Suspense fallback={<LoadingSpinner />}>
-                        <ProductDetails />
-                      </Suspense>
-                    } />
+                    {/* Product Details Route - Temporarily removed */}
                     
                     {/* Cart Route */}
                     <Route path="/cart" element={
